@@ -1,5 +1,5 @@
 <template>
-  <p>details</p>
+  <p class="text-primary-light">details</p>
 </template>
 
 <script>

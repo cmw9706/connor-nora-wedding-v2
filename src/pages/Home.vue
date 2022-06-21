@@ -8,7 +8,12 @@
       />
     </div>
     <div class="flex flex-col gap-10 xs:hidden">
-      <Card v-for="item in menuItems" :text="item" :key="item" />
+      <Card
+        @click="navigate(item)"
+        v-for="item in menuItems"
+        :text="item"
+        :key="item"
+      />
     </div>
   </div>
 </template>
@@ -25,12 +30,12 @@ export default defineComponent({
   },
   setup() {
     const menuItems = ["Details", "RSVP", "Registry"];
-    const testText = "Connor";
     const router = useRouter();
-    const navToDetails = () => {
-      router.push("Details");
+
+    const navigate = (item) => {
+      router.push(item);
     };
-    return { navToDetails, testText, menuItems };
+    return { menuItems, router, navigate };
   },
 });
 </script>
