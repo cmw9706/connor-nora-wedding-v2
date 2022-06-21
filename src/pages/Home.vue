@@ -7,7 +7,7 @@
         alt="a picture of connor and nora"
       />
     </div>
-    <div class="flex flex-col gap-10">
+    <div class="flex flex-col gap-10 xs:hidden">
       <Card v-for="item in menuItems" :text="item" :key="item" />
     </div>
   </div>

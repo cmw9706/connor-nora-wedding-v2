@@ -12,7 +12,7 @@
         </p>
       </div>
 
-      <div class="xl:w-2/3" style="background-color: red">
+      <div class="xl:w-3/5 2xl:px-12">
         <slot />
       </div>
     </div>
