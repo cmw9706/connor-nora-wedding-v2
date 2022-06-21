@@ -2,6 +2,7 @@
   <div
     class="angels flex flex-col w-screen h-screen overflow-auto bg-primary-green p-28 xs:p-12"
   >
+    <MobileMenu class="md:invisible xs:visible my-4" />
     <div class="flex flex-col w-full items-center justify-center">
       <div class="text-center mb-10">
         <h1 class="text-primary-light lg:text-6xl md:text-6xl text-4xl">
@@ -20,9 +21,16 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
+import MobileMenu from "@/components/MobileMenu.vue";
+
 export default defineComponent({
   name: "DefaultLayout.vue",
+  components: { MobileMenu },
+  setup() {
+    const mobileMenuShowing = ref(false);
+    return { mobileMenuShowing };
+  },
 });
 </script>
 

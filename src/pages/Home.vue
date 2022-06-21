@@ -1,21 +1,23 @@
 <template>
-  <div class="grid md:grid-cols-2 h-full w-full gap-10">
-    <div>
-      <img
-        class="rounded-lg xs:col-span-full"
-        src="../assets/cn.jpg"
-        alt="a picture of connor and nora"
-      />
+  <Transition name="slide-fade" appear>
+    <div class="grid md:grid-cols-2 h-full w-full gap-10">
+      <div>
+        <img
+          class="rounded-lg xs:col-span-full"
+          src="../assets/cn.jpg"
+          alt="a picture of connor and nora"
+        />
+      </div>
+      <div class="flex flex-col gap-10 md:visible xs:invisible">
+        <Card
+          @click="navigate(item)"
+          v-for="item in menuItems"
+          :text="item"
+          :key="item"
+        />
+      </div>
     </div>
-    <div class="flex flex-col gap-10 md:visible xs:invisible">
-      <Card
-        @click="navigate(item)"
-        v-for="item in menuItems"
-        :text="item"
-        :key="item"
-      />
-    </div>
-  </div>
+  </Transition>
 </template>
 
 <script>
@@ -40,4 +42,18 @@ export default defineComponent({
 });
 </script>
 
-<style></style>
+<style>
+.slide-fade-enter-active {
+  transition: all 1s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translatey(20px);
+  opacity: 0;
+}
+</style>
