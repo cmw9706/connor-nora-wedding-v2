@@ -1,6 +1,6 @@
 <template>
   <button
-    class="transition transform ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 rounded-lg bg-primary-gold flex flex-grow text-4xl p-4 items-center justify-center max-w-xl"
+    class="transition transform ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 rounded-lg bg-primary-gold flex flex-grow text-4xl p-4 items-center justify-center"
     v-text="text"
   />
 </template>

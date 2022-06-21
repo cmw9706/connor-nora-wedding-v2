@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 h-full w-full gap-10 mt-10 justify-center">
+  <div class="grid grid-cols-2 h-full w-full gap-10">
     <div>
       <img
         class="rounded-lg"

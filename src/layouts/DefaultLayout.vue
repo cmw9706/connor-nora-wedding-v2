@@ -2,8 +2,8 @@
   <div
     class="angels flex flex-col w-screen h-screen overflow-auto bg-primary-green p-28"
   >
-    <div class="items-center justify-center">
-      <div class="text-center">
+    <div class="flex flex-col w-full items-center justify-center">
+      <div class="text-center mb-10">
         <h1 class="text-primary-light lg:text-6xl md:text-6xl sm:text-4xl">
           Connor and Nora
         </h1>
@@ -12,7 +12,7 @@
         </p>
       </div>
 
-      <div class="flex flex-col flex-grow max-w-4xl">
+      <div class="xl:w-2/3" style="background-color: red">
         <slot />
       </div>
     </div>

@@ -15,6 +15,9 @@ module.exports = {
         spacing: "margin, padding",
         margin: "margin",
       },
+      height: {
+        128: "32rem",
+      },
     },
   },
   plugins: [],

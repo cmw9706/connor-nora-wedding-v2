@@ -10,7 +10,6 @@ export default defineComponent({
   components: {
     DefaultLayout,
   },
-  setup() {},
 });
 </script>
 
