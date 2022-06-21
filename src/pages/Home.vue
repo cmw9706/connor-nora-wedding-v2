@@ -1,13 +1,13 @@
 <template>
-  <div class="grid grid-cols-2 h-full w-full gap-10">
+  <div class="grid md:grid-cols-2 h-full w-full gap-10">
     <div>
       <img
-        class="rounded-lg"
+        class="rounded-lg xs:col-span-full"
         src="../assets/cn.jpg"
         alt="a picture of connor and nora"
       />
     </div>
-    <div class="flex flex-col gap-10 xs:hidden">
+    <div class="flex flex-col gap-10 md:visible xs:invisible">
       <Card
         @click="navigate(item)"
         v-for="item in menuItems"
