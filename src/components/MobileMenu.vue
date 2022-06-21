@@ -1,8 +1,8 @@
 <template>
-  <div class="space-y-2">
-    <div class="w-8 h-0.5 bg-primary-gold"></div>
-    <div class="w-8 h-0.5 bg-primary-gold"></div>
-    <div class="w-8 h-0.5 bg-primary-gold"></div>
+  <div @click="$emit('toggle')" class="space-y-2">
+    <div class="rounded w-8 h-0.5 bg-primary-gold"></div>
+    <div class="rounded w-8 h-0.5 bg-primary-gold"></div>
+    <div class="rounded w-8 h-0.5 bg-primary-gold"></div>
   </div>
 </template>
 
