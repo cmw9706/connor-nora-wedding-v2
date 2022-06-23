@@ -22,9 +22,29 @@
     </div>
     <div
       v-if="mobileMenuShowing"
-      class="fixed inset-0 w-full h-screen items-center justify-center z-50 flex bg-accent-green"
+      class="fixed inset-0 w-full h-screen items-center justify-center z-50 flex flex-col justify-evenly bg-accent-green"
     >
-      <button @click="toggleMobileMenu">Close</button>
+      <button
+        @click="navigate('Details')"
+        class="text-primary-dark lg:text-6xl md:text-6xl text-4xl"
+      >
+        Details
+      </button>
+      <button
+        @click="navigate('RSVP')"
+        class="text-primary-dark lg:text-6xl md:text-6xl text-4xl"
+      >
+        RSVP
+      </button>
+      <button
+        @click="navigate('Registry')"
+        class="text-primary-dark lg:text-6xl md:text-6xl text-4xl"
+      >
+        Registry
+      </button>
+      <button class="text-primary-dark align-bottom" @click="toggleMobileMenu">
+        Close
+      </button>
     </div>
   </div>
 </template>
@@ -32,17 +52,23 @@
 <script>
 import { defineComponent, ref } from "vue";
 import MobileMenu from "@/components/MobileMenu.vue";
+import { useRouter } from "vue-router";
 
 export default defineComponent({
   name: "DefaultLayout.vue",
   components: { MobileMenu },
   setup() {
     const mobileMenuShowing = ref(false);
+    const router = useRouter();
     const toggleMobileMenu = () => {
-      console.log("CLick!");
       mobileMenuShowing.value = !mobileMenuShowing.value;
     };
-    return { mobileMenuShowing, toggleMobileMenu };
+
+    const navigate = (item) => {
+      mobileMenuShowing.value = false;
+      router.push(item);
+    };
+    return { mobileMenuShowing, toggleMobileMenu, navigate };
   },
 });
 </script>
