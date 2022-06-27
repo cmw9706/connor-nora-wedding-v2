@@ -8,7 +8,7 @@
           alt="a picture of connor and nora"
         />
       </div>
-      <div class="flex flex-col gap-10 md:visible xs:invisible">
+      <div class="flex flex-col gap-10 invisible md:visible">
         <Card
           @click="navigate(item)"
           v-for="item in menuItems"

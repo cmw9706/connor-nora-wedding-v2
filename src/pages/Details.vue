@@ -1,5 +1,7 @@
 <template>
-  <p class="text-primary-light">details</p>
+  <div class="flex flex-col flex-grow bg-primary-gold text-center m-auto">
+    <p class="text-primary-light">This page is a working in progress</p>
+  </div>
 </template>
 
 <script>
