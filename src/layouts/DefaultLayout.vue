@@ -20,9 +20,10 @@
         </p>
       </div>
 
-      <div class="xl:w-3/5 2xl:px-12">
+      <div class="w-full xl:w-3/5 2xl:px-12">
         <slot />
       </div>
+
       <button
         @click="goHome"
         v-if="showHomeButton"

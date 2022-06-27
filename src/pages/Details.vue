@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-grow bg-primary-gold text-center">
-    <p class="text-primary-light">This page is a working in progress</p>
+  <div class="text-center p-8 bg-accent-green h-full w-full rounded">
+    <p class="text-primary-dark">This page is a working in progress</p>
   </div>
 </template>
 
