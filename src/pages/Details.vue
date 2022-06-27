@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col flex-grow bg-primary-gold text-center m-auto">
+  <div class="flex flex-grow bg-primary-gold text-center">
     <p class="text-primary-light">This page is a working in progress</p>
   </div>
 </template>
