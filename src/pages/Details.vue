@@ -1,6 +1,6 @@
 <template>
   <Jumbotron>
-    <p class="text-primary-dark">This page is a working in progress</p>
+    <p class="text-primary-dark">This page is a work in progress</p>
   </Jumbotron>
 </template>
 
