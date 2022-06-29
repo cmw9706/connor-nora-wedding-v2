@@ -17,7 +17,7 @@
         placeholder="Message"
         type="text"
       />
-      <Card class="w-32" :text="buttonText" />
+      <Card class="w-32" :text="buttonText" @click="submitRsvp" />
     </div>
   </Jumbotron>
 </template>
@@ -31,7 +31,10 @@ export default defineComponent({
   components: { Jumbotron, Card },
   setup() {
     const buttonText = "Send";
-    return { buttonText };
+    const submitRsvp = () => {
+      console.log("Rsvp sent!");
+    };
+    return { buttonText, submitRsvp };
   },
 });
 </script>
