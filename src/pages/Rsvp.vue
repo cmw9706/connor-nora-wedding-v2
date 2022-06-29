@@ -32,7 +32,7 @@ export default defineComponent({
   setup() {
     const buttonText = "Send";
     const submitRsvp = () => {
-      console.log("Rsvp sent!");
+      alert("This feature is not ready at the moment, but will be soon!");
     };
     return { buttonText, submitRsvp };
   },
