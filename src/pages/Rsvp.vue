@@ -26,6 +26,7 @@
 import { defineComponent } from "vue";
 import Jumbotron from "@/components/Jumbotron.vue";
 import Card from "@/components/Card.vue";
+
 export default defineComponent({
   name: "Rsvp.vue",
   components: { Jumbotron, Card },
