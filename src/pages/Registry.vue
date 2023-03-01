@@ -1,6 +1,13 @@
 <template>
   <Jumbotron>
-    <p class="text-primary-dark">This page is a work in progress</p>
+    <p class="text-primary-dark">
+      We are so grateful for your presence on our special day and do not ask for
+      any physical gifts. Instead, if you would like to contribute to our
+      honeymoon, we kindly ask that you consider sending us a monetary gift
+      through our Venmo account. We will provide a QR code below as well as at
+      the wedding that you can scan to send your gift. Your generosity and love
+      are the most important gifts, and we cannot wait to celebrate with you!
+    </p>
   </Jumbotron>
 </template>
 

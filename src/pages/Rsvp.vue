@@ -26,6 +26,7 @@
 import { defineComponent } from "vue";
 import Jumbotron from "@/components/Jumbotron.vue";
 import Card from "@/components/Card.vue";
+import { putData } from "@/putData.js";
 
 export default defineComponent({
   name: "Rsvp.vue",
@@ -33,7 +34,7 @@ export default defineComponent({
   setup() {
     const buttonText = "Send";
     const submitRsvp = () => {
-      alert("This feature is not ready at the moment, but will be soon!");
+      putData({ cnwdrsvp: "test", test: "connor" });
     };
     return { buttonText, submitRsvp };
   },
