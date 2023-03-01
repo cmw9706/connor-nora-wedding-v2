@@ -6,16 +6,19 @@
         class="rounded w-full md:w-2/3 h-12 text-center"
         placeholder="Name"
         type="text"
+        v-model="nameField"
       />
       <input
         class="rounded w-full md:w-2/3 h-12 text-center"
         placeholder="Email"
         type="text"
+        v-model="emailField"
       />
       <input
         class="rounded w-full md:w-2/3 h-12 text-center"
         placeholder="Message"
         type="text"
+        v-model="messageField"
       />
       <Card class="w-32" :text="buttonText" @click="submitRsvp" />
     </div>
@@ -23,20 +26,36 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import Jumbotron from "@/components/Jumbotron.vue";
 import Card from "@/components/Card.vue";
 import { putData } from "@/putData.js";
+import { v4 as uuidv4 } from "uuid";
 
 export default defineComponent({
   name: "Rsvp.vue",
   components: { Jumbotron, Card },
   setup() {
     const buttonText = "Send";
+    const nameField = ref("");
+    const emailField = ref("");
+    const messageField = ref("");
+
     const submitRsvp = () => {
-      putData({ cnwdrsvp: "test", test: "connor" });
+      console.log(nameField);
+      console.log(emailField);
+      if (nameField.value && emailField.value) {
+        putData({
+          cnwdrsvp: uuidv4(),
+          name: nameField.value,
+          email: emailField.value,
+          message: messageField.value,
+        });
+      } else {
+        alert("C'mon dude, you gotta tell me who you are");
+      }
     };
-    return { buttonText, submitRsvp };
+    return { buttonText, submitRsvp, nameField, emailField, messageField };
   },
 });
 </script>
