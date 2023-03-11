@@ -2,8 +2,8 @@ import * as AWS from "aws-sdk";
 AWS.config.region = "us-east-1";
 
 AWS.config.credentials = new AWS.Credentials(
-  "AKIAULCFAKQGEA4QNA5T",
-  "BELROif1oijplj4hX/iakoBKh+dQfH5yMYnGkjPf"
+  process.env.VUE_APP_AWS_KEY,
+  process.env.VUE_APP_AWS_SECRET
 );
 const docClient = new AWS.DynamoDB.DocumentClient();
 
