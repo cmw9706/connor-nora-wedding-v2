@@ -7,18 +7,12 @@ AWS.config.credentials = new AWS.Credentials(
 );
 const docClient = new AWS.DynamoDB.DocumentClient();
 
-export const putData = (data) => {
+export const putData = (data, onComplete) => {
   console.log(AWS.config);
   const params = {
     TableName: "Wedding_Rsvp",
     Item: data,
   };
 
-  docClient.put(params, function (err, data) {
-    if (err) {
-      console.log("Error", err);
-    } else {
-      console.log("Success", data);
-    }
-  });
+  docClient.put(params, (err, data) => onComplete(err, data));
 };

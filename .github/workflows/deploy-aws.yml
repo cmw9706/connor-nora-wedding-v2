@@ -23,6 +23,12 @@ jobs:
         with:
           cmd: install
 
+      - name: Create .env file
+        uses: SpicyPizza/create-envfile@v1.3.0
+        with:
+          envkey_VUE_APP_AWS_KEY: ${{ secrets.AWS_DB_KEY }}
+          envkey_VUE_APP_AWS_SECRET: ${{ secrets.AWS_DB_SECRET }}
+
       - name: Build app
         uses: borales/actions-yarn@v3.0.0
         with:

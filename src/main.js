@@ -3,12 +3,11 @@ import App from "./App.vue";
 import "./assets/index.css";
 import "./assets/tailwind.css";
 import router from "@/router";
-// import * as AWS from "aws-sdk";
+import Toast, { POSITION } from "vue-toastification";
+// Import the CSS or use your own!
+import "vue-toastification/dist/index.css";
 
-// Secret Access ket
-// BELROif1oijplj4hX/iakoBKh+dQfH5yMYnGkjPf
-
-// Access key id
-// AKIAULCFAKQGEA4QNA5T
-
-createApp(App).use(router).mount("#app");
+createApp(App)
+  .use(Toast, { position: POSITION.BOTTOM_CENTER })
+  .use(router)
+  .mount("#app");
