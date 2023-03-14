@@ -32,7 +32,7 @@ jobs:
           envkey_VUE_APP_AWS_SECRET: ${{ secrets.AWS_DB_SECRET }}
 
       - name: Build app
-        uses: borales/actions-yarn@v3.0.0
+        uses: borales/actions-yarn@v4
         with:
           cmd: build
 
