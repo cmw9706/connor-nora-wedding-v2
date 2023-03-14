@@ -28,9 +28,6 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@latest",
     "vue-cli-plugin-tailwind": "~3.0.0"
   },
-  "engines": {
-    "node": "14"
-  },
   "eslintConfig": {
     "root": true,
     "env": {
