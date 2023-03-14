@@ -17,14 +17,22 @@ jobs:
 
       - name: Setup node environment
         uses: actions/setup-node@v3.3.0
+        with:
+          node-version: 14.19.1
 
       - name: Install dependencies
-        uses: borales/actions-yarn@v3.0.0
+        uses: borales/actions-yarn@v4
         with:
-          cmd: install
+          cmd: install --ignore-engines
+
+      - name: Create .env file
+        uses: SpicyPizza/create-envfile@v1.3.0
+        with:
+          envkey_VUE_APP_AWS_KEY: ${{ secrets.AWS_DB_KEY }}
+          envkey_VUE_APP_AWS_SECRET: ${{ secrets.AWS_DB_SECRET }}
 
       - name: Build app
-        uses: borales/actions-yarn@v3.0.0
+        uses: borales/actions-yarn@v4
         with:
           cmd: build
 
