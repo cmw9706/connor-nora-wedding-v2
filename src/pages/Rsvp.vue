@@ -62,7 +62,7 @@ export default defineComponent({
               });
             } else {
               console.log(data);
-              toast(`Success! We will see you their!`, {
+              toast(`Success! We will see you there!`, {
                 timeout: 2000,
                 type: TYPE.SUCCESS,
               });
