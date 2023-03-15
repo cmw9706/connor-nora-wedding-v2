@@ -4,7 +4,7 @@
       <p class="text-2xl">RSVP</p>
       <input
         class="rounded w-full md:w-2/3 h-12 text-center"
-        placeholder="Name"
+        placeholder="Name(s)"
         type="text"
         v-model="nameField"
       />
