@@ -44,8 +44,6 @@ export default defineComponent({
     const toast = useToast();
 
     const submitRsvp = () => {
-      console.log(nameField);
-      console.log(emailField);
       if (nameField.value && emailField.value) {
         putData(
           {
