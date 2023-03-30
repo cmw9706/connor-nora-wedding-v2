@@ -8,7 +8,6 @@ AWS.config.credentials = new AWS.Credentials(
 const docClient = new AWS.DynamoDB.DocumentClient();
 
 export const putData = (data, onComplete) => {
-  console.log(AWS.config);
   const params = {
     TableName: "Wedding_Rsvp",
     Item: data,
