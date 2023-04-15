@@ -8,6 +8,11 @@
       the wedding that you can scan to send your gift. Your generosity and love
       are the most important gifts, and we cannot wait to celebrate with you!
     </p>
+    <img
+      class="w-80 rounded-lg mx-auto"
+      src="../assets/IMG_3937.jpg"
+      alt="a QR code for venmo"
+    />
   </Jumbotron>
 </template>
 
@@ -22,5 +27,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style></style>
